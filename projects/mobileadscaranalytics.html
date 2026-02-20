@@ -1,1 +1,223 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Ads Car Analytics</title>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+  background:#0f1115;
+  color:#e6eaf0;
+  line-height:1.65;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:50px 25px;
+}
+
+h1{font-size:2.4rem;margin-bottom:10px;}
+h2{margin-top:45px;font-size:1.6rem;border-left:5px solid #4da3ff;padding-left:12px;}
+h3{margin-top:25px;color:#9cc7ff;}
+
+.card{
+  background:#151a22;
+  padding:25px;
+  border-radius:14px;
+  margin-top:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.45);
+}
+
+ul{margin-top:10px;}
+li{margin:6px 0;}
+
+.code{
+  background:#0b0e13;
+  padding:14px;
+  border-radius:10px;
+  font-family:monospace;
+  margin:12px 0;
+  color:#7fd1ff;
+  white-space:pre-wrap;
+}
+
+a.button{
+  display:inline-block;
+  margin-top:20px;
+  background:#4da3ff;
+  color:white;
+  text-decoration:none;
+  padding:14px 22px;
+  border-radius:10px;
+  font-weight:600;
+  transition:.25s;
+}
+
+a.button:hover{
+  background:#2f7edb;
+  transform:translateY(-2px);
+}
+
+.back{
+  display:inline-block;
+  margin-bottom:30px;
+  color:#7fb7ff;
+  text-decoration:none;
+}
+
+.back:hover{text-decoration:underline;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="/">← Back to Portfolio</a>
+
+<h1>Mobile Ads Car Analytics</h1>
+<p>Route cost intelligence and real-time analytics platform for mobile advertising vehicles.</p>
+
+<div class="card">
+<h2>Inspiration</h2>
+<p>
+Years ago during a traffic jam, I saw a mobile advertising car stuck on the road. That moment sparked a question:
+what happens to advertising cost efficiency when the vehicle never reaches its destination on time?
+</p>
+
+<p>
+If delays increase operational cost, businesses need a way to predict, analyze, and optimize route expenses before deployment.
+This project was built to solve that problem for mobile advertising fleets.
+</p>
+</div>
+
+<div class="card">
+<h2>What It Does</h2>
+<ul>
+<li>Analyzes cost across routes</li>
+<li>Calculates cost per meter</li>
+<li>Compares cost between vehicles</li>
+<li>Evaluates cost per driver</li>
+<li>Breaks down cost per waypoint</li>
+<li>Detects anomalies in trip spending</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>How It Was Built</h2>
+<ul>
+<li>Real-time analysis agent powered by Google ADK</li>
+<li>Vehicle monitoring system capturing video and route telemetry</li>
+<li>Trip data stored in Firestore</li>
+<li>Analytics engine processes historical + live movement data</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Key Analytical Capabilities</h2>
+
+<h3>Driver Cost Comparison</h3>
+<p>The system can compare route cost between multiple vehicles with different pricing models.</p>
+
+<ul>
+<li>Car 1 → $0.22 per 10 km</li>
+<li>Car 2 → $0.30 per 20 km</li>
+</ul>
+
+<p>Returns:</p>
+<ul>
+<li>Total cost per route</li>
+<li>Waypoint breakdown tables</li>
+<li>Cost difference analysis</li>
+<li>Most expensive vehicle identification</li>
+</ul>
+
+<h3>Trip Intelligence</h3>
+<ul>
+<li>Total trips per vehicle</li>
+<li>Driver time-on-road comparison</li>
+<li>Latest trip analytics</li>
+</ul>
+
+<h3>Fuel Cost Analysis</h3>
+Supports multiple pricing models:
+
+<ul>
+<li>Cost per km</li>
+<li>Cost per meter</li>
+<li>Variable rate per vehicle</li>
+</ul>
+
+Outputs:
+<ul>
+<li>Leg-level cost tables</li>
+<li>Total fuel cost</li>
+<li>Graph coordinate output for visualization</li>
+<li>Anomaly detection datasets</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>Prompt Examples</h2>
+
+<div class="code">
+Calculate total driver cost for Car 1 if rate is $0.22 per 10 km.
+Return waypoint table with:
+distance | from | to | cost
+
+Compare with Car 2 if rate is $0.30 per 20 km.
+Return difference and identify most expensive vehicle.
+</div>
+
+<div class="code">
+Calculate fuel cost for latest trip of Car 1
+Fuel price = $3 per 18 km
+Return table + total cost
+</div>
+
+<div class="code">
+Generate graph coordinates for Car 2
+x = cumulative distance
+y = cost per leg (not cumulative)
+</div>
+
+</div>
+
+<div class="card">
+<h2>Challenges</h2>
+<ul>
+<li>Cloud infrastructure cost optimization</li>
+<li>Limited documentation for new frameworks</li>
+<li>Real-time data synchronization issues</li>
+<li>Telemetry reliability from moving vehicles</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Accomplishments</h2>
+<p>
+Built a fully working analytics engine capable of predicting route costs, analyzing driver efficiency,
+and comparing operational expenses across vehicles in real time.
+</p>
+</div>
+
+<div class="card">
+<h2>Future Improvements</h2>
+<ul>
+<li>Predictive congestion simulation</li>
+<li>Route optimization AI</li>
+<li>Cost forecasting dashboard</li>
+<li>Real-time anomaly alerts</li>
+<li>Multi-fleet comparison system</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>
