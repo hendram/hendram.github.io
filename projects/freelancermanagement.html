@@ -1,1 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelancer Management System</title>
 
+<style>
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+  background:#0f1115;
+  color:#e6eaf0;
+  line-height:1.65;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:50px 25px;
+}
+
+h1{
+  font-size:2.4rem;
+  margin-bottom:10px;
+}
+
+h2{
+  margin-top:45px;
+  font-size:1.6rem;
+  border-left:5px solid #4da3ff;
+  padding-left:12px;
+}
+
+h3{
+  margin-top:25px;
+  color:#9cc7ff;
+}
+
+p{
+  opacity:.9;
+}
+
+ul{
+  margin-top:10px;
+}
+
+li{
+  margin:6px 0;
+}
+
+.card{
+  background:#151a22;
+  padding:25px;
+  border-radius:14px;
+  margin-top:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.45);
+}
+
+.formula{
+  background:#0b0e13;
+  padding:15px;
+  border-radius:10px;
+  font-family:monospace;
+  margin:12px 0;
+  color:#7fd1ff;
+}
+
+.result{
+  background:#132018;
+  padding:15px;
+  border-radius:10px;
+  margin-top:10px;
+  color:#9ff0b6;
+}
+
+a.button{
+  display:inline-block;
+  margin-top:25px;
+  background:#4da3ff;
+  color:white;
+  text-decoration:none;
+  padding:14px 22px;
+  border-radius:10px;
+  font-weight:600;
+  transition:.25s;
+}
+
+a.button:hover{
+  background:#2f7edb;
+  transform:translateY(-2px);
+}
+
+.back{
+  display:inline-block;
+  margin-bottom:30px;
+  color:#7fb7ff;
+  text-decoration:none;
+}
+
+.back:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="/">← Back to Portfolio</a>
+
+<h1>Freelancer Management System</h1>
+<p>Intelligent freelancer discovery, ranking, and task-matching platform.</p>
+
+<div class="card">
+
+<h2>Inspiration</h2>
+<p>
+This project was inspired by platforms like Upwork and Freelancer, as well as real-world observations from developer peers. Many developers share similar years of experience but specialize in different domains. One may excel in building product catalogs while another specializes in payment gateway integration.
+</p>
+
+<p>
+The idea was simple: what if experts collaborated only within their strongest domains? This benefits everyone:
+</p>
+
+<ul>
+<li>Managers get the best talent for each task.</li>
+<li>Freelancers focus only on their strongest expertise.</li>
+<li>Companies receive higher-quality software built by specialists.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>What It Does</h2>
+<p>
+The system builds a structured freelancer database where each freelancer can refer others for specific user stories. Managers can assign reputation scores after tasks, and search freelancers using skill filters, rankings, and performance history.
+</p>
+
+<p>
+Managers can also send RFPs, receive proposals, negotiate fees, and select the most suitable freelancer for a task.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>How It Was Built</h2>
+<ul>
+<li>Developed using Atlassian Forge (Run on Atlassian compliant)</li>
+<li>GlobalPage integrated with Jira IssuePanel module</li>
+<li>Custom UI frontend</li>
+<li>TiDB used as storage</li>
+<li>Jira API used to retrieve user story data</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Candidate Scoring Logic</h2>
+
+<h3>Experience Score</h3>
+<p>1 year experience = 10 points</p>
+<div class="formula">Experience Score = Years × 10</div>
+
+<h3>Reputation Score</h3>
+<ul>
+<li>Assigned manually by manager</li>
+<li>No multiplier</li>
+<li>No decay</li>
+<li>Represents completed task performance</li>
+</ul>
+
+<h3>Total Capability Score</h3>
+<div class="formula">Total = Experience Score + Reputation Score</div>
+
+<h3>Task Requirement</h3>
+<p>1 Story Point = 10 Required Points</p>
+<div class="formula">Required Score = Story Points × 10</div>
+
+<h3>Eligibility Rule</h3>
+<div class="formula">Freelancer Eligible if → Total ≥ Required</div>
+
+<div class="result">
+Only eligible freelancers are ranked. Top 5 highest scores are shown.
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Application Features</h2>
+
+<h3>Resume Management (Manager)</h3>
+<ul>
+<li>Add Resume</li>
+<li>Update Profile</li>
+<li>Edit Resume</li>
+</ul>
+
+<h3>Reputation System</h3>
+<ul>
+<li>Reputation catalog</li>
+<li>Reward or penalty scoring</li>
+</ul>
+
+<h3>Referral System</h3>
+<ul>
+<li>Freelancers can refer others</li>
+<li>Referrals affect reputation score</li>
+</ul>
+
+<h3>Task & Bidding</h3>
+<ul>
+<li>Invitation dashboard</li>
+<li>Search and ranking system</li>
+<li>Negotiation workflow</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>System Functions</h2>
+<ul>
+<li>Maintains vetted freelancer database</li>
+<li>Dynamic ranking algorithm</li>
+<li>Transparent negotiation tracking</li>
+<li>Role-based security access</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Challenges</h2>
+<ul>
+<li>Designing a fair ecosystem for companies and freelancers</li>
+<li>Balancing opportunities between junior and senior developers</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Accomplishments</h2>
+<p>
+Successfully built a granular-expertise freelancer platform where each task can be handled by a domain specialist, ensuring higher quality results and optimal efficiency.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Lessons Learned</h2>
+<ul>
+<li>Designing fair scoring algorithms</li>
+<li>Building recommendation systems</li>
+<li>Implementing reputation-based ranking</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Future Improvements</h2>
+<ul>
+<li>Extend to other professional domains (Security, DevOps, SRE)</li>
+<li>Custom algorithm builder for managers</li>
+<li>Custom scoring configuration</li>
+<li>Advanced KPI monitoring</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Try It</h2>
+<a class="button" href="https://developer.atlassian.com/console/install/31af772d-638f-4d73-9366-1c590d4604bc?product=jira" target="_blank">
+Launch Application
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
