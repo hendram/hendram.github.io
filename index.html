@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+  background:#0f1115;
+  color:#fff;
+}
+
+header{
+  padding:40px 20px;
+  text-align:center;
+  font-size:2rem;
+  font-weight:700;
+  background:#151922;
+}
+
+.container{
+  max-width:1000px;
+  margin:40px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#1b2130;
+  border-radius:14px;
+  overflow:hidden;
+  transition:.25s;
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 35px rgba(0,0,0,.55);
+}
+
+.thumbnail{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  display:block;
+}
+
+.content{
+  padding:20px;
+}
+
+.title{
+  font-size:1.3rem;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.desc{
+  font-size:.95rem;
+  opacity:.8;
+  margin-bottom:18px;
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  flex:1;
+  text-align:center;
+  padding:10px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+  transition:.2s;
+}
+
+.watch{
+  background:#ff0033;
+  color:#fff;
+}
+
+.watch:hover{
+  background:#cc0028;
+}
+
+.details{
+  background:#2a3145;
+  color:#fff;
+}
+
+.details:hover{
+  background:#3a4461;
+}
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  font-size:.85rem;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+My Projects Portfolio
+</header>
+
+<section class="container">
+
+<!-- Project 1 -->
+<div class="card">
+  <img class="thumbnail" src="https://img.youtube.com/vi/_UmGmUdQlVU/maxresdefault.jpg">
+  <div class="content">
+    <div class="title">Freelancer Management System</div>
+    <div class="desc">
+      Platform for managing freelancers, task tracking, and productivity analytics.
+    </div>
+    <div class="buttons">
+      <a class="btn watch" href="https://www.youtube.com/watch?v=_UmGmUdQlVU" target="_blank">Watch Demo</a>
+      <a class="btn details" href="/projects/freelancermanagement.html">Project Details</a>
+    </div>
+  </div>
+</div>
+
+<!-- Project 2 -->
+<div class="card">
+  <img class="thumbnail" src="https://img.youtube.com/vi/3HO-tBAzMrk/maxresdefault.jpg">
+  <div class="content">
+    <div class="title">Mobile Ads Car Analytics</div>
+    <div class="desc">
+      Analytics dashboard for tracking mobile advertisement vehicles and campaign performance.
+    </div>
+    <div class="buttons">
+      <a class="btn watch" href="https://www.youtube.com/watch?v=3HO-tBAzMrk" target="_blank">Watch Demo</a>
+      <a class="btn details" href="/projects/mobileadscaranalytics.html">Project Details</a>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<footer>
+© 2026 Your Name — Portfolio
+</footer>
+
+</body>
+</html>
