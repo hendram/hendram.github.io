@@ -13,12 +13,25 @@ body{
   color:#fff;
 }
 
-header{
-  padding:40px 20px;
-  text-align:center;
-  font-size:2rem;
+.glass-header{
+  margin:30px auto 10px;
+  width:max-content;
+  padding:14px 38px;
+  border-radius:999px;
+
+  font-size:1.6rem;
   font-weight:700;
-  background:#151922;
+  color:#fff;
+  text-align:center;
+
+  background:rgba(140,140,140,.18);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.25),
+    0 8px 25px rgba(0,0,0,.35);
 }
 
 .container{
@@ -111,8 +124,8 @@ footer{
 
 <body>
 
-<header>
-My Projects Portfolio
+<header class="glass-header">
+  Portfolio Project Gallery
 </header>
 
 <section class="container">
