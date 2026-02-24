@@ -101,17 +101,32 @@ body{
   gap:8px;
 }
 
-/* title */
 .title{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  
+  padding:12px 18px;
+  border-radius:12px;
+
   font-size:1.35rem;
   font-weight:700;
-  letter-spacing:.3px;
-  margin-bottom:4px;
-  background:linear-gradient(to right,#ffffff,#cfd8ff);
-  -webkit-background-clip:text;
-  color:transparent;
-}
+  letter-spacing:.5px;
+  text-align:center;
+  color:#fff;
 
+  background:rgba(10,15,25,.55);
+  backdrop-filter:blur(6px);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.2);
+
+  width:80%;
+  pointer-events:none;
+}
+  
 /* description */
 .desc{
   font-size:.95rem;
@@ -226,9 +241,11 @@ footer{
 
 <!-- Project 2 -->
 <div class="card">
+  <div class="title">Mobile Ads Car Analytics</div>
+  
   <img class="thumbnail" src="https://img.youtube.com/vi/3HO-tBAzMrk/maxresdefault.jpg">
   <div class="content">
-    <div class="title">Mobile Ads Car Analytics</div>
+    
     <div class="desc">
       Analytics dashboard for tracking mobile advertisement vehicles and campaign performance.
     </div>
@@ -240,9 +257,10 @@ footer{
 </div>
 
 <div class="card">
+    <div class="title">Tenant Management System</div>
   <img class="thumbnail" src="https://i.ytimg.com/vi/1EOcjdAILKM/hqdefault.jpg">
   <div class="content">
-    <div class="title">Tenant Management System</div>
+ 
     <div class="desc">
       Tenant record application to save, search tenant data on apartment or condominium
     </div>
