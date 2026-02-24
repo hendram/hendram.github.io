@@ -79,7 +79,7 @@ body{
   display: flex;
   flex-direction: row;
   width:25vw;
-  height: 30vh
+  height: 30vh;
   object-fit:cover;
 }
 
