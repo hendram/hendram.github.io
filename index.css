@@ -1,7 +1,8 @@
+
 /* ---------- BASE ---------- */
 body{
   margin:0;
-  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  font-family:system-ui,"Segoe UI",Arial,sans-serif;
   background:url("wall.png");
   background-size:cover;
   background-position:center;
@@ -9,6 +10,7 @@ body{
   color:#111;
   width:100vw;
   height:100vh;
+  overflow:hidden;
 }
 
 /* ---------- PAGE WRAPPER ---------- */
@@ -16,6 +18,7 @@ body{
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:flex-start;
   width:100vw;
   height:100vh;
 }
@@ -35,36 +38,42 @@ body{
   color:#fff;
 
   border-radius:10vh;
-
   background:rgba(70,70,70,.45);
   backdrop-filter:blur(14px);
 
-  border:1px solid rgba(255,255,255,.25);
+  border:.1vh solid rgba(255,255,255,.25);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.35),
+    inset 0 .1vh 0 rgba(255,255,255,.35),
     0 2vh 4vh rgba(0,0,0,.35);
 }
 
-
+/* ---------- CONTAINER ---------- */
 .container{
   display:flex;
-  flex-direction: row;
-  gap:4vw;
-  justify-content: center;
-  align-items: center;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+
   width:90vw;
-  padding:3vh 0;
-  height: 90vh;
+  height:88vh;
+
+  gap:4vw;
 }
 
+/* ---------- CARD ---------- */
 .card{
-  background:#1b2130;
-  border-radius: 2vw;
-  overflow:hidden;
   display:flex;
   flex-direction:column;
-  width: 25vw;
-  height: 60vh;
+  align-items:center;
+  justify-content:flex-start;
+
+  width:25vw;
+  height:60vh;
+
+  background:#1b2130;
+  border-radius:2vw;
+  overflow:hidden;
+
   box-shadow:0 1vh 3vh rgba(0,0,0,.6);
   transition:.25s;
 }
@@ -73,60 +82,88 @@ body{
   transform:translateY(-.6vh) scale(1.02);
 }
 
-
 /* ---------- IMAGE ---------- */
 .thumbnail{
-  display: flex;
-  flex-direction: row;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
   width:25vw;
-  height: 30vh;
+  height:30vh;
   object-fit:cover;
 }
-
 
 /* ---------- CONTENT ---------- */
 .content{
   display:flex;
   flex-direction:column;
-  padding:2vh 1.2vw;
-  flex:1;
+  align-items:center;
+  justify-content:flex-start;
+
+  width:25vw;
+  height:30vh;
 }
 
-
-/* ---------- TEXT ---------- */
+/* ---------- TITLE ---------- */
 .title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:23vw;
+  height:5vh;
+
   font-size:1.4vw;
   font-weight:600;
-  margin-bottom:1vh;
-  color:white;
+  color:#fff;
 }
 
+/* ---------- DESCRIPTION ---------- */
 .desc{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+
+  width:23vw;
+  height:15vh;
+
   font-size:1vw;
-  opacity:.8;
-  margin-bottom:2vh;
-  color:white;
-  flex:1;
+  color:#fff;
+  opacity:.85;
+  text-align:center;
 }
 
-
-/* ---------- BUTTONS ---------- */
+/* ---------- BUTTON ROW ---------- */
 .buttons{
   display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+
+  width:23vw;
+  height:10vh;
+
   gap:1vw;
 }
 
+/* ---------- BUTTON ---------- */
 .btn{
-  flex:1;
-  text-align:center;
-  padding:1vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:11vw;
+  height:5vh;
+
   border-radius:1vh;
   text-decoration:none;
+
   font-size:.95vw;
   font-weight:600;
   transition:.2s;
 }
 
+/* ---------- BUTTON COLORS ---------- */
 .watch{
   background:#ff0033;
   color:#fff;
@@ -145,12 +182,16 @@ body{
   background:#3a4461;
 }
 
-
 /* ---------- FOOTER ---------- */
 footer{
-  margin-top:auto;
-  padding:2vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:100vw;
+  height:6vh;
+
   font-size:.9vw;
+  color:#fff;
   opacity:.6;
-  color:white;
 }
