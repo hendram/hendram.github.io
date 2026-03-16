@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoAnsweringForm — AI Automated Q&A Agent</title>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+  background:#0f1115;
+  color:#e6eaf0;
+  line-height:1.65;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:50px 25px;
+}
+
+h1{font-size:2.4rem;margin-bottom:10px;}
+h2{margin-top:45px;font-size:1.6rem;border-left:5px solid #4da3ff;padding-left:12px;}
+h3{margin-top:25px;color:#9cc7ff;}
+
+.card{
+  background:#151a22;
+  padding:25px;
+  border-radius:14px;
+  margin-top:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.45);
+}
+
+ul{margin-top:10px;}
+li{margin:6px 0;}
+
+.code{
+  background:#0b0e13;
+  padding:14px;
+  border-radius:10px;
+  font-family:monospace;
+  margin:12px 0;
+  color:#7fd1ff;
+  white-space:pre-wrap;
+}
+
+a.button{
+  display:inline-block;
+  margin-top:20px;
+  background:#4da3ff;
+  color:white;
+  text-decoration:none;
+  padding:14px 22px;
+  border-radius:10px;
+  font-weight:600;
+  transition:.25s;
+}
+
+a.button:hover{
+  background:#2f7edb;
+  transform:translateY(-2px);
+}
+
+.back{
+  display:inline-block;
+  margin-bottom:30px;
+  color:#7fb7ff;
+  text-decoration:none;
+}
+
+.back:hover{text-decoration:underline;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="/">← Back to Portfolio</a>
+
+<h1>AutoAnsweringForm — AI Automated Q&A Agent</h1>
+<p>
+An AI-powered automated question-and-answer system designed to assist users in completing structured Q&A forms using knowledge retrieved from both internal databases and the internet.
+</p>
+
+<div class="card">
+<h2>Inspiration</h2>
+
+<p>
+Many modern workflows require answering structured forms quickly and accurately. These include job recruitment tests, research questionnaires, knowledge competitions, and corporate knowledge documentation.
+</p>
+
+<p>
+In many situations, users must search the internet manually, verify information, and rewrite answers into form fields. This process is repetitive and time-consuming.
+</p>
+
+<p>
+The idea behind AutoAnsweringForm was to create an AI agent capable of performing these steps automatically:
+</p>
+
+<ul>
+<li>Search for information from multiple sources</li>
+<li>Retrieve relevant knowledge from internal databases</li>
+<li>Combine internal and external data</li>
+<li>Generate clear answers automatically</li>
+<li>Fill Q&A responses faster and more efficiently</li>
+</ul>
+
+<p>
+The system acts as a knowledge retrieval assistant capable of supporting continuous research and automated answer generation.
+</p>
+
+</div>
+
+<div class="card">
+<h2>What It Does</h2>
+
+<ul>
+<li>Automatically searches the internet for relevant information</li>
+<li>Integrates corporate or internal knowledge bases</li>
+<li>Generates AI-based answers for structured Q&A forms</li>
+<li>Reduces manual research time</li>
+<li>Supports continuous knowledge retrieval</li>
+<li>Creates consistent answers across multiple users</li>
+</ul>
+
+<p>
+The platform can operate in multiple search modes:
+</p>
+
+<ul>
+<li><b>Internet-only mode</b> — answers retrieved from external sources</li>
+<li><b>Internal knowledge mode</b> — answers generated from corporate databases</li>
+<li><b>Hybrid mode</b> — combines internal knowledge with external web data</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>Use Case Scenarios</h2>
+
+<h3>HR Recruitment Testing</h3>
+<p>
+Human Resources departments sometimes conduct Q&A based recruitment tests. 
+This platform can help generate structured answers automatically while ensuring each candidate receives unique responses generated from fresh knowledge sources.
+</p>
+
+<h3>Urgent Q&A Completion</h3>
+<p>
+Some users must complete large sets of questions quickly. AutoAnsweringForm accelerates this process by generating answers instantly using AI retrieval systems.
+</p>
+
+<h3>Corporate Knowledge Base Enrichment</h3>
+<p>
+Organizations can populate internal knowledge bases using scraped data and structured documents. 
+Once stored, employees can retrieve answers instantly without repeating research tasks.
+</p>
+
+<h3>Research and Learning Support</h3>
+<p>
+Students or researchers can use the system as a learning tool that continuously retrieves new knowledge from the internet while referencing stored knowledge archives.
+</p>
+
+</div>
+
+<div class="card">
+<h2>How It Was Built</h2>
+
+<p>
+The system follows a distributed microservice architecture designed to handle knowledge ingestion, processing, embedding generation, and AI retrieval.
+</p>
+
+<ul>
+<li>Browser automation services scrape and collect information</li>
+<li>Text chunking services prepare knowledge for AI processing</li>
+<li>Vector embedding generation transforms text into machine-searchable vectors</li>
+<li>Vector search enables semantic similarity retrieval</li>
+<li>Streaming infrastructure distributes data between services</li>
+<li>Multiple workers run in parallel to scale scraping and data processing</li>
+</ul>
+
+<p>
+This architecture allows the platform to continuously expand its knowledge base while maintaining fast query performance.
+</p>
+
+</div>
+
+<div class="card">
+<h2>System Architecture</h2>
+
+<ul>
+<li>Frontend Q&A form interface</li>
+<li>Scraping workers collecting internet knowledge</li>
+<li>Chunk generator preparing documents for AI models</li>
+<li>Vector embedding generator creating searchable embeddings</li>
+<li>Vector database storing semantic knowledge</li>
+<li>AI retrieval engine generating answers</li>
+<li>Streaming data pipeline connecting services</li>
+</ul>
+
+<p>
+Each component operates independently, allowing horizontal scaling when data collection or answer generation demand increases.
+</p>
+
+</div>
+
+<div class="card">
+<h2>Example Workflow</h2>
+
+<div class="code">
+User submits a question.
+
+System checks:
+1. Internal knowledge base
+2. Scraped external knowledge
+3. Vector similarity search
+
+Relevant information is retrieved.
+
+AI generates a clean and structured answer.
+</div>
+
+<div class="code">
+Question:
+"What are the latest cybersecurity trends?"
+
+System retrieves:
+• Internal research reports
+• Latest web articles
+• Security blog content
+
+AI summarizes and returns a concise answer.
+</div>
+
+</div>
+
+<div class="card">
+<h2>Challenges</h2>
+
+<ul>
+<li>Handling large volumes of scraped knowledge</li>
+<li>Maintaining answer accuracy across multiple sources</li>
+<li>Managing distributed worker coordination</li>
+<li>Ensuring vector search relevance</li>
+<li>Balancing performance with infrastructure cost</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>Accomplishments</h2>
+
+<p>
+Built a distributed AI knowledge pipeline capable of collecting external information, processing documents, generating embeddings, and answering questions automatically through a scalable architecture.
+</p>
+
+<p>
+The system demonstrates how AI-assisted knowledge retrieval can dramatically reduce manual research and improve productivity when handling structured question workflows.
+</p>
+
+</div>
+
+<div class="card">
+<h2>Project Resources</h2>
+
+<a class="button" href="https://github.com/hendram/autoansweringform" target="_blank">
+Main Application
+</a>
+<br>
+
+<a class="button" href="https://github.com/hendram/browserconnsvc" target="_blank">
+Browser Connection Service
+</a>
+<br>
+
+<a class="button" href="https://github.com/hendram/chunkgeneratorforaimodel" target="_blank">
+Knowledge Chunk Generator
+</a>
+<br>
+
+<a class="button" href="https://github.com/hendram/vectorembedgen" target="_blank">
+Vector Embedding Generator
+</a>
+<br>
+
+<a class="button" href="https://github.com/hendram/browserconnworker1" target="_blank">
+Browser Worker 1
+</a>
+<br>
+
+<a class="button" href="https://github.com/hendram/browserconnworker2" target="_blank">
+Browser Worker 2
+</a>
+<br>
+
+<a class="button" href="https://github.com/hendram/browserconnworker3" target="_blank">
+Browser Worker 3
+</a>
+<br>
+
+<a class="button" href="https://github.com/hendram/kafka-tidb" target="_blank">
+Streaming Infrastructure (Kafka + TiDB)
+</a>
+
+<br><br>
+
+<h2>Future Improvements</h2>
+
+<ul>
+<li>Automated dataset verification</li>
+<li>Real-time knowledge update pipelines</li>
+<li>Improved answer summarization models</li>
+<li>Better ranking for vector search results</li>
+<li>Advanced multi-agent retrieval workflows</li>
+</ul>
+
+</div>
+
+</div>
+</body>
+</html>
